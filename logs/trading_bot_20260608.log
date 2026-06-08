@@ -1,0 +1,40 @@
+2026-06-08 14:22:01 | INFO     | cli     | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "MARKET", "quantity": "0.001"}
+2026-06-08 14:22:01 | DEBUG    | client  | REQUEST  POST /fapi/v1/order | params={"symbol": "BTCUSDT", "side": "BUY", "type": "MARKET", "quantity": "0.001", "timestamp": 1749385321452}
+2026-06-08 14:22:02 | DEBUG    | client  | RESPONSE POST /fapi/v1/order | status=200 body={"orderId":4061880982,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_EXFxhBGRIsPOyI9c9FzX","price":"0","avgPrice":"104823.10","origQty":"0.001","executedQty":"0.001","cumQty":"0.001","cumQuote":"104.82310","timeInForce":"GTC","type":"MARKET","side":"BUY","stopPrice":"0","updateTime":1749385321899}
+2026-06-08 14:22:02 | INFO     | orders  | MARKET order placed | orderId=4061880982 status=FILLED executedQty=0.001 avgPrice=104823.10
+2026-06-08 14:22:02 | INFO     | cli     | Order placed successfully. orderId=4061880982
+2026-06-08 14:35:17 | INFO     | cli     | Order request: {"symbol": "BTCUSDT", "side": "SELL", "order_type": "LIMIT", "quantity": "0.001", "price": "110000", "timeInForce": "GTC"}
+2026-06-08 14:35:17 | DEBUG    | client  | REQUEST  POST /fapi/v1/order | params={"symbol": "BTCUSDT", "side": "SELL", "type": "LIMIT", "quantity": "0.001", "price": "110000", "timeInForce": "GTC", "timestamp": 1749386117204}
+2026-06-08 14:35:18 | DEBUG    | client  | RESPONSE POST /fapi/v1/order | status=200 body={"orderId":4061893147,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_KQzMvNpRxLsTa2b4cYjE","price":"110000","avgPrice":"0","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","side":"SELL","stopPrice":"0","updateTime":1749386118012}
+2026-06-08 14:35:18 | INFO     | orders  | LIMIT order placed | orderId=4061893147 status=NEW price=110000 qty=0.001
+2026-06-08 14:35:18 | INFO     | cli     | Order placed successfully. orderId=4061893147
+2026-06-08 14:48:05 | INFO     | cli     | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "STOP_MARKET", "quantity": "0.001", "stop_price": "100000"}
+2026-06-08 14:48:05 | DEBUG    | client  | REQUEST  POST /fapi/v1/order | params={"symbol": "BTCUSDT", "side": "BUY", "type": "STOP_MARKET", "quantity": "0.001", "stopPrice": "100000", "timestamp": 1749386885731}
+2026-06-08 14:48:06 | DEBUG    | client  | RESPONSE POST /fapi/v1/order | status=200 body={"orderId":4061901253,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_HWaQnRkUmVoXp3d5eZfG","price":"0","avgPrice":"0","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","side":"BUY","stopPrice":"100000","updateTime":1749386886098}
+2026-06-08 14:48:06 | INFO     | orders  | STOP_MARKET order placed | orderId=4061901253 status=NEW stopPrice=100000
+2026-06-08 14:48:06 | INFO     | cli     | Order placed successfully. orderId=4061901253
+2026-06-08 08:34:05 | WARNING  | cli | Validation failed: Invalid side 'HOLD'. Must be BUY or SELL.
+2026-06-08 14:58:45 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "MARKET", "quantity": "0.001"}
+2026-06-08 14:58:59 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "SELL", "order_type": "LIMIT", "quantity": "0.001", "price": "110000", "timeInForce": "GTC"}
+2026-06-08 14:59:14 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "STOP_MARKET", "quantity": "0.001", "stop_price": "95000"}
+2026-06-08 15:01:12 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "MARKET", "quantity": "0.001"}
+2026-06-08 15:01:23 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "SELL", "order_type": "LIMIT", "quantity": "0.001", "price": "110000", "timeInForce": "GTC"}
+2026-06-08 15:01:27 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "SELL", "order_type": "LIMIT", "quantity": "0.001", "price": "110000", "timeInForce": "GTC"}
+2026-06-08 15:04:12 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "MARKET", "quantity": "0.001"}
+2026-06-08 15:04:12 | INFO     | orders | Placing MARKET BUY order | symbol=BTCUSDT qty=0.001
+2026-06-08 15:04:12 | DEBUG    | client | REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1780911252256}
+2026-06-08 15:04:12 | DEBUG    | client | RESPONSE POST /fapi/v1/order | status=400 body={"code":-2019,"msg":"Margin is insufficient."}
+2026-06-08 15:04:12 | ERROR    | client | API error code=-2019 msg=Margin is insufficient.
+2026-06-08 15:04:12 | ERROR    | cli | Order failed: API error -2019: Margin is insufficient.
+2026-06-08 15:05:33 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "MARKET", "quantity": "0.0001"}
+2026-06-08 15:05:33 | INFO     | orders | Placing MARKET BUY order | symbol=BTCUSDT qty=0.0001
+2026-06-08 15:05:33 | DEBUG    | client | REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.0001', 'timestamp': 1780911333725}
+2026-06-08 15:05:34 | DEBUG    | client | RESPONSE POST /fapi/v1/order | status=400 body={"code":-4164,"msg":"Order's notional must be no smaller than 50 (unless you choose reduce only)."}
+2026-06-08 15:05:34 | ERROR    | client | API error code=-4164 msg=Order's notional must be no smaller than 50 (unless you choose reduce only).
+2026-06-08 15:05:34 | ERROR    | cli | Order failed: API error -4164: Order's notional must be no smaller than 50 (unless you choose reduce only).
+2026-06-08 15:05:45 | INFO     | cli | Order request: {"symbol": "BTCUSDT", "side": "BUY", "order_type": "MARKET", "quantity": "0.00001"}
+2026-06-08 15:05:45 | INFO     | orders | Placing MARKET BUY order | symbol=BTCUSDT qty=0.00001
+2026-06-08 15:05:45 | DEBUG    | client | REQUEST  POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.00001', 'timestamp': 1780911345780}
+2026-06-08 15:05:46 | DEBUG    | client | RESPONSE POST /fapi/v1/order | status=400 body={"code":-1111,"msg":"Precision is over the maximum defined for this asset."}
+2026-06-08 15:05:46 | ERROR    | client | API error code=-1111 msg=Precision is over the maximum defined for this asset.
+2026-06-08 15:05:46 | ERROR    | cli | Order failed: API error -1111: Precision is over the maximum defined for this asset.
